@@ -1,0 +1,7 @@
+{
+  "name": "todoWithFire",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
