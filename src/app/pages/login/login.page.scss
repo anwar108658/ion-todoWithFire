@@ -1,0 +1,21 @@
+ion-toolbar {
+  --padding-start: 16px;
+}
+.login-content {
+  display: flex;
+  margin-top: 3rem;
+}
+ion-title{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+ion-input{
+  width: 300px;
+}
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}

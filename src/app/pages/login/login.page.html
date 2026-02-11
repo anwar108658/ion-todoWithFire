@@ -1,0 +1,19 @@
+<ion-content [fullscreen]="true" >
+  <ion-modal #modal isOpen="true" [backdropDismiss]="false"  [enterAnimation]="enterAnimation">
+    <ng-template>
+      <ion-content>
+        <div class="login-content">
+          <div class="content">
+            <ion-img src="assets/userLogin.png" style="width: 150px;"></ion-img>
+            <ion-title color="tertiary">Sign In</ion-title>
+            <ion-list lines="inset">
+              <ion-item>
+                <ion-input label="Enter Email" labelPlacement="floating" placeholder="abc@gmail.com"></ion-input>
+              </ion-item>
+            </ion-list>
+          </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
