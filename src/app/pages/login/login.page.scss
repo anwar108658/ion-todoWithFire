@@ -3,7 +3,9 @@ ion-toolbar {
 }
 .login-content {
   display: flex;
-  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 ion-title{
   font-size: 1.8rem;

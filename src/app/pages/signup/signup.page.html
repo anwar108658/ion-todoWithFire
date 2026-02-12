@@ -1,13 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">signup</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" >
+  <ion-modal #modal isOpen="true" [backdropDismiss]="false"  [enterAnimation]="enterAnimation">
+    <ng-template>
+      <ion-content>
+        <div class="login-content">
+          <div class="content">
+            <ion-img src="assets/userLogin.png" style="width: 150px;"></ion-img>
+            <ion-title color="tertiary">Create Your Account</ion-title>
+            <ion-list lines="inset">
+              <ion-item>
+                <ion-input label="Enter Name :"  placeholder="Raheel"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input label="Enter Email :"  placeholder="abc@gmail.com"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input type="password" placeholder="*********" label="Password :" >
+                  <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+                </ion-input>
+              </ion-item>
+              <ion-item></ion-item>
+              <ion-button color="tertiary" expand="full" shape="round">Create Acount</ion-button>
+            </ion-list>
+          </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>
