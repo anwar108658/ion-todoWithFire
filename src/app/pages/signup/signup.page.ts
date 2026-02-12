@@ -8,7 +8,7 @@ import { AnimationController, IonContent, IonHeader, IonTitle, IonToolbar, IonIm
   templateUrl: './signup.page.html',
   styleUrls: ['./signup.page.scss'],
   standalone: true,
-  imports: [IonContent, IonTitle, CommonModule, FormsModule, IonImg, IonModal, IonInput, IonItem, IonList, IonInputPasswordToggle, IonButton, IonText]
+  imports: [IonContent, IonTitle, CommonModule, FormsModule, IonImg, IonModal, IonInput, IonItem, IonList, IonInputPasswordToggle, IonButton]
 })
 export class SignupPage implements OnInit {
 
