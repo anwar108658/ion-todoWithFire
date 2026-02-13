@@ -1,5 +1,5 @@
 <ion-content [fullscreen]="true" >
-  <ion-modal #modal isOpen="true" [backdropDismiss]="false"  [enterAnimation]="enterAnimation">
+  <ion-modal #modal isOpen="true" [backdropDismiss]="false"  [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
     <ng-template>
       <ion-content>
         <div class="login-content">
@@ -22,7 +22,7 @@
                   you don't have any account yet ?
                 </ion-text>
               </ion-item>
-              <ion-button color="tertiary" expand="full" shape="round">Registered Acount</ion-button>
+              <ion-button routerLink="/signup" type="button" color="tertiary" expand="full" shape="round">Registered Acount</ion-button>
             </ion-list>
           </div>
         </div>
