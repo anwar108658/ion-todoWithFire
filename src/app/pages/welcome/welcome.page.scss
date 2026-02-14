@@ -1,0 +1,19 @@
+.well{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/free-vector/mobile_677411-3439.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ion-img{
+    width: 13rem;
+}
+ion-item{
+    --background: transparent;
+}
+ion-button{
+    width: 120px;
+}
