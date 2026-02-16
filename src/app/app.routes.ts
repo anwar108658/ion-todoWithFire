@@ -19,11 +19,11 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/dashboard/dashboard.page').then( m => m.DashboardPage)
   },
   {
-    path: 'not-found',
-    loadComponent: () => import('./pages/not-found/not-found.page').then( m => m.NotFoundPage)
-  },
-  {
     path: 'welcome',
     loadComponent: () => import('./pages/welcome/welcome.page').then( m => m.WelcomePage)
+  },
+  {
+    path: '**',
+    loadComponent: () => import('./pages/not-found/not-found.page').then( m => m.NotFoundPage)
   },
 ];
