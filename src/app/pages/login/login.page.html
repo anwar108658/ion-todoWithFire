@@ -17,6 +17,12 @@
               </ion-item>
               <ion-item></ion-item>
               <ion-button type="submit" expand="full" shape="round">Log In</ion-button>
+              <div class="googleBtn">
+                <ion-button (click)="authService.onSignInWithGoogle()" expand="full" shape="round" color="medium">
+                  <ion-icon slot="start" name="logo-google"></ion-icon>
+                  Log In With Google
+                </ion-button>
+              </div>
               <ion-item>
                 <ion-text color="secondary">
                   you don't have any account yet ?
