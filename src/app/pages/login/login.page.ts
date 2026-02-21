@@ -23,14 +23,25 @@ export class LoginPage implements OnInit {
   InitializeForm(){
     this.loginForm = new FormGroup({
       email:new FormControl('',[Validators.required,Validators.email]),
-      password:new FormControl('',[Validators.required]),
+      password:new FormControl('',[Validators.required,Validators.minLength(6)]),
     })
   }
 
-  onSubmit(){
-    this.loginForm.markAllAsTouched()
-    this.authService.login("abc@gmail.com","123456")
+onSubmit(){
+  this.loginForm.markAllAsTouched()
+  this.authService.login("abc@gmail.com","123456")
+}
+
+trimValue(name: string) {
+  const control = this.loginForm.get(name);
+  if (control) {
+    const val = control.value as string;
+    if (val) {
+      const trimmed = val.trim();
+      control.setValue(trimmed);
+    }
   }
+}
 
 
 

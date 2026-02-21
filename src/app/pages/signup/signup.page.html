@@ -10,23 +10,27 @@
       </ion-header>
       <ion-content>
         <div class="login-content">
-          <form class="content">
+          <form class="content" [formGroup]="registerForm" (submit)="onSubmit()">
             <ion-img src="assets/userLogin.png" style="width: 150px;"></ion-img>
             <ion-title color="tertiary">Create Your Account</ion-title>
             <ion-list lines="inset">
               <ion-item>
-                <ion-input label="Enter Name :"  placeholder="Raheel"></ion-input>
+                <ion-input (change)="trimValue('name')" formControlName="name" label="Enter Name :"  placeholder="Raheel"></ion-input>
               </ion-item>
               <ion-item>
-                <ion-input label="Enter Email :"  placeholder="abc@gmail.com"></ion-input>
+                <ion-input (change)="trimValue('email')" formControlName="email" label="Enter Email :"  placeholder="abc@gmail.com"></ion-input>
               </ion-item>
               <ion-item>
-                <ion-input type="password" placeholder="*********" label="Password :" >
+                <ion-input (change)="trimValue('password')" formControlName="password" type="password" placeholder="*********" label="Password :" >
                   <ion-input-password-toggle slot="end"></ion-input-password-toggle>
                 </ion-input>
               </ion-item>
               <ion-item></ion-item>
-              <ion-button color="tertiary" expand="full" shape="round">Create Acount</ion-button>
+              <ion-button type="submit" color="tertiary" expand="full" shape="round">Create Acount</ion-button>
+              <ion-button (click)="authService.onSignInWithGoogle()" expand="full" shape="round" color="medium">
+                <ion-icon slot="start" name="logo-google"></ion-icon>
+                Log In With Google
+              </ion-button>
             </ion-list>
           </form>
         </div>
