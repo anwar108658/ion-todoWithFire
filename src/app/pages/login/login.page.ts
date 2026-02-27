@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
 
 onSubmit(){
   this.loginForm.markAllAsTouched()
-  this.authService.login("abc@gmail.com","123456")
+  this.authService.login("anwar108658@gmail.com","1opmuj")
 }
 
 trimValue(name: string) {

@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { protectDashbordGuard } from './guards/protect-dashbord-guard';
 
 export const routes: Routes = [
   {
@@ -16,6 +17,7 @@ export const routes: Routes = [
   },
   {
     path: 'dashboard',
+    canActivate:[protectDashbordGuard],
     loadComponent: () => import('./pages/dashboard/dashboard.page').then( m => m.DashboardPage)
   },
   {
