@@ -29,7 +29,6 @@ export class SignupPage implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.registerForm.value)
     if (this.registerForm.invalid) {
       return alert("invalid Credential")
     }
@@ -46,7 +45,6 @@ export class SignupPage implements OnInit {
       }
     }
   }
-
   enterAnimation = (baseEl: HTMLElement) => {
     const root = baseEl.shadowRoot;
 

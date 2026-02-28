@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { protectDashbordGuard } from './guards/protect-dashbord-guard';
+import { protectLoginGuardGuard } from './guards/protect-login-guard-guard';
 
 export const routes: Routes = [
   {
@@ -9,10 +10,12 @@ export const routes: Routes = [
   },
   {
     path: 'login',
+    canActivate:[protectLoginGuardGuard],
     loadComponent: () => import('./pages/login/login.page').then( m => m.LoginPage)
   },
   {
     path: 'signup',
+    canActivate:[protectLoginGuardGuard],
     loadComponent: () => import('./pages/signup/signup.page').then( m => m.SignupPage)
   },
   {
@@ -22,6 +25,7 @@ export const routes: Routes = [
   },
   {
     path: 'welcome',
+    canActivate:[protectLoginGuardGuard],
     loadComponent: () => import('./pages/welcome/welcome.page').then( m => m.WelcomePage)
   },
   {
