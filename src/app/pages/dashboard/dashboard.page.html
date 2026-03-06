@@ -1,12 +1,18 @@
 <ion-content [fullscreen]="true">
+  <div class="main">
+
+  </div>
   <ion-modal #modal [isOpen]="true" [backdropDismiss]="false" [showBackdrop]="false" [initialBreakpoint]="0.35" [breakpoints]="[0.25,0.35,0.5,0.75]">
     <ng-template>
       <ion-header>
-        <ion-fab horizontal="end">
-          <ion-fab-button size="small" color="primary">
-            Add
-          </ion-fab-button>
-        </ion-fab>
+        <div class="popupHeader">
+          <h2>Today's Task</h2>
+          <div>
+            <ion-button fill="outline" shape="round">
+              <ion-icon slot="icon-only" name="add"></ion-icon>
+            </ion-button>
+          </div>
+        </div>
       </ion-header>
       <ion-content>
         <ion-list>
