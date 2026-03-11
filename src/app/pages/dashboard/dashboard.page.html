@@ -1,3 +1,27 @@
 <ion-content [fullscreen]="true">
-  <div class="flex"></div>
+  <ion-fab horizontal="end" vertical="bottom" class="right-[50%] bottom-14 translate-x-1/2">
+    <ion-fab-button color="info" size="medium">
+      <ion-icon name="add" size="large" color="light"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="home-sharp"></ion-icon>
+        Home
+      </ion-tab-button>
+      <ion-tab-button tab="uc_task">
+        <ion-icon name="calendar-number-sharp"></ion-icon>
+        Up Coming
+      </ion-tab-button>
+      <ion-tab-button tab="statistics">
+        <ion-icon name="stats-chart-sharp"></ion-icon>
+        Stats
+      </ion-tab-button>
+      <ion-tab-button tab="profile">
+        <ion-icon name="person-sharp"></ion-icon>
+        Profile
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>

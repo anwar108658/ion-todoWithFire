@@ -35,4 +35,20 @@
  /* @import "@ionic/angular/css/palettes/dark.always.css"; */
  /* @import "@ionic/angular/css/palettes/dark.class.css"; */
  // @import '@ionic/angular/css/palettes/dark.system.css';
- 
+:root {
+	--ion-color-info: #1e8dd2;
+	--ion-color-info-rgb: 30,141,210;
+	--ion-color-info-contrast: #000000;
+	--ion-color-info-contrast-rgb: 0,0,0;
+	--ion-color-info-shade: #1a7cb9;
+	--ion-color-info-tint: #3598d7;
+}
+
+.ion-color-info {
+	--ion-color-base: var(--ion-color-info);
+	--ion-color-base-rgb: var(--ion-color-info-rgb);
+	--ion-color-contrast: var(--ion-color-info-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-info-contrast-rgb);
+	--ion-color-shade: var(--ion-color-info-shade);
+	--ion-color-tint: var(--ion-color-info-tint);
+}

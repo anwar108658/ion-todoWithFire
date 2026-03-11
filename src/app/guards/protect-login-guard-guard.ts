@@ -10,7 +10,7 @@ export const protectLoginGuardGuard: CanActivateFn = (route, state) => {
   return authState(auth).pipe(
     map((user)=>{
       if (user) {
-        router.navigate(['./dashboard'])
+        router.navigate(['./dashboard/home'])
         return false
       } else {
         return true
