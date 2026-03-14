@@ -1,11 +1,19 @@
 <ion-content [fullscreen]="true">
-    <div class="header">
-        <ion-button (click)="click($event)" fill="outline" color="light">
-            <ion-icon name="grid-outline" color="medium" class="text-[1.4rem]"></ion-icon>
-        </ion-button>
-        <h3 class="page-heading">Home Page</h3>
-        <ion-button fill="outline" color="light">
-            <ion-icon name="notifications-outline" color="medium" class="text-[1.4rem]"></ion-icon>
-        </ion-button>
+    <div class="p-7 flex flex-col gap-5">
+        <div class="header">
+            <ion-button (click)="click($event)" fill="outline" color="light">
+                <ion-icon name="grid-outline" color="medium" class="text-[1.4rem]"></ion-icon>
+            </ion-button>
+            <h3 class="page-heading">Home Page</h3>
+            <ion-button fill="outline" color="light">
+                <ion-icon name="notifications-outline" color="medium" class="text-[1.4rem]"></ion-icon>
+            </ion-button>
+        </div>
+        <div class="h-hero-section rounded-xl text-white">
+            <h3 class="">Today's progress summary :</h3>
+            <p>15 Tasks</p>
+            <ion-progress-bar class="mt-5 p-1 rounded" color="success" value="0.25"></ion-progress-bar>
+            <p>25%</p>
+        </div>
     </div>
 </ion-content>
