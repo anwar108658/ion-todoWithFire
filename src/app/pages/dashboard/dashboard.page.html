@@ -1,11 +1,13 @@
 <ion-content [fullscreen]="true">
-  <ion-fab horizontal="end" vertical="bottom" class="right-[50%] bottom-10 translate-x-1/2">
-    <ion-fab-button color="info" size="medium">
+
+  <ion-fab horizontal="end" vertical="bottom" class="right-[50%] bottom-13 translate-x-1/2">
+    <ion-fab-button  id="open-modal" color="info" size="medium">
       <ion-icon name="add" size="large" color="light"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+
   <ion-tabs>
-    <ion-tab-bar slot="bottom">
+    <ion-tab-bar slot="bottom" class="pb-3 pt-2">
       <ion-tab-button tab="home">
         <ion-icon name="home-sharp"></ion-icon>
         Home
@@ -24,4 +26,22 @@
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
+
+  <!-- ion-modal for task added -->
+  <ion-modal trigger="open-modal">
+    <ng-template>
+      <ion-content>
+        <div class="p-7 flex flex-col gap-5">
+          <div class="header">
+            <ion-button (click)="cancel()" fill="outline" color="light">
+              <ion-icon name="chevron-back-outline" color="medium" class="text-[1.4rem]"></ion-icon>
+            </ion-button>
+            <h3 class="page-heading">Create New Task</h3>
+            <div></div>
+          </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
 </ion-content>
