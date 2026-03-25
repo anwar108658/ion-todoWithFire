@@ -46,24 +46,24 @@ export const routes: Routes = [
     canActivate:[protectLoginGuardGuard],
     loadComponent: () => import('./pages/welcome/welcome.page').then( m => m.WelcomePage)
   },
-  {
-    path: '**',
-    loadComponent: () => import('./pages/not-found/not-found.page').then( m => m.NotFoundPage)
-  },
-  {
-    path: 'home',
-    loadComponent: () => import('./pages/home/home.page').then( m => m.HomePage)
-  },
-  {
-    path: 'uc-task',
-    loadComponent: () => import('./pages/uc-task/uc-task.page').then( m => m.UcTaskPage)
-  },
-  {
-    path: 'statistics',
-    loadComponent: () => import('./pages/statistics/statistics.page').then( m => m.StatisticsPage)
-  },
-  {
-    path: 'profile',
-    loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
-  },
+  // {
+  //   path: '**',
+  //   loadComponent: () => import('./pages/not-found/not-found.page').then( m => m.NotFoundPage)
+  // },
+  // {
+  //   path: 'home',
+  //   loadComponent: () => import('./pages/home/home.page').then( m => m.HomePage)
+  // },
+  // {
+  //   path: 'uc-task',
+  //   loadComponent: () => import('./pages/uc-task/uc-task.page').then( m => m.UcTaskPage)
+  // },
+  // {
+  //   path: 'statistics',
+  //   loadComponent: () => import('./pages/statistics/statistics.page').then( m => m.StatisticsPage)
+  // },
+  // {
+  //   path: 'profile',
+  //   loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
+  // },
 ];

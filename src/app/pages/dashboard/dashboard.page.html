@@ -1,7 +1,6 @@
 <ion-content [fullscreen]="true">
-
   <ion-fab horizontal="end" vertical="bottom" class="right-[50%] bottom-13 translate-x-1/2">
-    <ion-fab-button  id="open-modal" color="info" size="medium">
+    <ion-fab-button id="open-modal" color="info" size="medium">
       <ion-icon name="add" size="large" color="light"></ion-icon>
     </ion-fab-button>
   </ion-fab>
@@ -28,7 +27,7 @@
   </ion-tabs>
 
   <!-- ion-modal for task added -->
-  <ion-modal trigger="open-modal">
+  <ion-modal isOpen="true" trigger="open-modal">
     <ng-template>
       <ion-content>
         <div class="p-7 flex flex-col gap-5">
@@ -39,9 +38,59 @@
             <h3 class="page-heading">Create New Task</h3>
             <div></div>
           </div>
+          <form>
+            <ion-list lines="none">
+              <ion-item>
+                <div class="w-full">
+                  <h1>Task Name : </h1>
+                  <ion-input slot="start" fill="outline" placeholder="Enter text"></ion-input>
+                </div>
+              </ion-item>
+              <ion-item>
+                <div class="w-full">
+                  <h1>Category : </h1>
+                  <ion-select fill="outline" placeholder="Select Category">
+                    <ion-select-option value="apples">Apples</ion-select-option>
+                    <ion-select-option value="oranges">Oranges</ion-select-option>
+                    <ion-select-option value="bananas">Bananas</ion-select-option>
+                  </ion-select>
+                </div>
+              </ion-item>
+              <ion-item>
+                <div class="w-full">
+                  <h1>Task Deadline : </h1>
+                  <ion-datetime-button datetime="datetime"></ion-datetime-button>
+                  <ion-modal [keepContentsMounted]="true">
+                    <ng-template>
+                      <ion-datetime presentation="date" [formatOptions]="{
+                          date: {
+                            weekday: 'short',
+                            month: 'long',
+                            day: '2-digit',
+                          },
+                        }" 
+                        id="datetime"
+                        ></ion-datetime>
+                      </ng-template>
+                    </ion-modal>
+                  </div>
+                </ion-item>
+                <ion-item>
+                  <div class="w-full">
+                    <h1>Description : </h1>
+                    <ion-textarea rows="5" fill="outline" placeholder="something write about you task"></ion-textarea>
+                  </div>
+                </ion-item>
+                <ion-item>
+                  <div class="w-full">
+                    <h1>Create Task : </h1>
+                    <ion-button shape="round" size="large" class="w-full">Create Task</ion-button>
+                  </div>
+                </ion-item>
+              </ion-list>
+          </form>
         </div>
       </ion-content>
     </ng-template>
   </ion-modal>
-
 </ion-content>
