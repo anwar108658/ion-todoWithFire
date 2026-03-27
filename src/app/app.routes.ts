@@ -46,10 +46,10 @@ export const routes: Routes = [
     canActivate:[protectLoginGuardGuard],
     loadComponent: () => import('./pages/welcome/welcome.page').then( m => m.WelcomePage)
   },
-  // {
-  //   path: '**',
-  //   loadComponent: () => import('./pages/not-found/not-found.page').then( m => m.NotFoundPage)
-  // },
+  {
+    path: '**',
+    loadComponent: () => import('./pages/not-found/not-found.page').then( m => m.NotFoundPage)
+  },
   // {
   //   path: 'home',
   //   loadComponent: () => import('./pages/home/home.page').then( m => m.HomePage)
