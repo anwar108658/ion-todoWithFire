@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonIcon, IonButton, IonProgressBar } from '@ionic/angular/standalone';
+import { BtnComponent } from "src/app/btn/btn.component";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [FormsModule, IonContent, CommonModule, FormsModule, IonIcon, IonButton, IonProgressBar]
+  imports: [FormsModule, IonContent, CommonModule, FormsModule, IonIcon, IonButton, IonProgressBar, BtnComponent]
 })
 export class HomePage implements OnInit {
 
