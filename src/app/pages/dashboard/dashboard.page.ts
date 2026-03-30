@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { IonContent, IonModal, IonFab, IonFabButton, IonIcon, IonButton, IonTabs, IonTabBar, IonTabButton, IonList, IonItem, IonLabel, IonInput, IonSelect, IonSelectOption, IonDatetimeButton, IonDatetime, IonTextarea } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
-import { BtnComponent } from "src/app/btn/btn.component";
 
 @Component({
   selector: 'app-dashboard',
